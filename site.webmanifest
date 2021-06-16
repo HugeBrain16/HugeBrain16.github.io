@@ -1,0 +1,14 @@
+{
+    "name": "HugeBrain16",
+    "short_name": "HugeBrain16",
+    "icons": [
+        {
+            "src": "/android-chrome-96x96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#00b842",
+    "background_color": "#00b842",
+    "display": "standalone"
+}
