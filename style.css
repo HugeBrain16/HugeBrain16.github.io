@@ -1,0 +1,32 @@
+canvas#Ribbon {
+	background-color: #14cc27;
+	border: 10px solid #1b6322;
+}
+
+canvas#Container {
+	position: relative;
+	left: 10px;
+	background-color: #c4ffca;
+}
+
+img#GithubLogoRibbon {
+	position: relative;
+	left: -225px;
+	top: -25px;
+}
+
+p#ContainerContent {
+	position: relative;
+	top: -810px;
+	left: 35px;
+	font-size: large;
+	font-family: Verdana;
+	font-weight: bold;
+}
+
+h3#DiscordServerTitle {
+	position: relative;
+	top: -910px;
+	left: 920px;
+	font-family: Verdana;
+}
