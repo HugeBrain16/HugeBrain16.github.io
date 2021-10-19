@@ -1,32 +1,85 @@
-canvas#Ribbon {
-	background-color: #14cc27;
-	border: 10px solid #1b6322;
+body {
+    background: linear-gradient(204deg, #0d4b5a, #377a99, #72c1ee);
+    background-size: 600% 600%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Noto Sans Mono', sans-serif;
+    animation: WeirdGradient 59s ease infinite;
 }
 
-canvas#Container {
-	position: relative;
-	left: 10px;
-	background-color: #c4ffca;
+@keyframes WeirdGradient {
+    0%{background-position:64% 0%}
+    50%{background-position:37% 100%}
+    100%{background-position:64% 0%}
 }
 
-img#GithubLogoRibbon {
-	position: relative;
-	left: -225px;
-	top: -25px;
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 25px;
 }
 
-p#ContainerContent {
-	position: relative;
-	top: -810px;
-	left: 35px;
-	font-size: large;
-	font-family: Verdana;
-	font-weight: bold;
+.navbar li {
+    border: 2px solid darkslategray;
+    float: left;
+    background-color: lightgray;
 }
 
-h3#DiscordServerTitle {
-	position: relative;
-	top: -910px;
-	left: 920px;
-	font-family: Verdana;
+.navbar a {
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    padding: 8px;
+    color: inherit;
+}
+
+.navbar img {
+    vertical-align: middle;
+    width: 15px;
+}
+
+.navbar a:hover {
+    background-color: darkgray;
+}
+
+.content {
+    border: 3px solid darkgray;
+    background-color: lightgray;
+    margin: 25px;
+    padding: 10px;
+}
+
+.content a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.content img {
+    vertical-align: middle;
+    width: 30px;
+    height: auto;
+}
+
+.content-jebait {
+    display: inline-block;
+    background-color: darkgray;
+    border: 3px solid gray;
+}
+
+.content-jebait:hover {
+    background-color: gray;
+}
+
+.content p{
+    margin: 0;
+}
+
+.content h1 {
+    margin: 5px;
+    padding: 10px;
+}
+
+.content-header {
+    padding: 5px;
+    border-bottom: 2px solid darkgray;
 }
