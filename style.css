@@ -19,13 +19,13 @@ body {
     padding: 25px;
 }
 
-.navbar li {
+.navbar-item {
     border: 2px solid darkslategray;
     float: left;
     background-color: lightgray;
 }
 
-.navbar a {
+.navbar-link {
     text-align: center;
     text-decoration: none;
     display: block;
@@ -33,12 +33,12 @@ body {
     color: inherit;
 }
 
-.navbar img {
+.navbar-logo {
     vertical-align: middle;
     width: 15px;
 }
 
-.navbar a:hover {
+.navbar-link:hover {
     background-color: darkgray;
 }
 
@@ -54,19 +54,19 @@ body {
     color: inherit;
 }
 
-.content img {
+.content-emote {
     vertical-align: middle;
     width: 30px;
     height: auto;
 }
 
-.content-jebait {
+.content-button {
     display: inline-block;
     background-color: darkgray;
     border: 3px solid gray;
 }
 
-.content-jebait:hover {
+.content-button:hover {
     background-color: gray;
 }
 
