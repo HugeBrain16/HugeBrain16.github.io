@@ -5,6 +5,7 @@
 		<link rel="stylesheet" href="style.css">
 		<link rel="icon" type="image/png" href="favicon.ico">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto%20Sans%20Mono">
+        <link rel="stylesheet" href="prism.css">
 		
 		<!-- load js here -->
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -45,18 +46,83 @@
 		<div class="content">
 			<div class="content-header">
 				<h1>Hello!</h1>
-				<p>
-					<span>I'm <b>HugeBrain16</b></span>
-					<img class="content-emote" src="https://cdn.frankerfacez.com/emoticon/584091/4">
-				</p>
-				<p>I make stupid stuff</p>
-				<p>See more stuff on my GitHub profile</p>
 			</div>
-			<p>I have <b class="content-repo-count"></b> Public repositories</p>
-			<h3 class="content-button" id="jebait">Click here to get jebaited!</h3>
-			<br />
-			<h3 class="content-button" id="random-repo">What's this???</h3>
+            <p>
+				<span>I'm <b>HugeBrain16</b></span>
+				<img class="content-emote" src="https://cdn.frankerfacez.com/emoticon/584091/4">
+			</p>
+			<p>This page is some kind of blog of mine, and ofc u can submit a post by creating a pull request</p>
+            <p>i will merge any posts, guides, or maybe funny stuff <img class="content-emote" src="https://cdn.frankerfacez.com/emoticon/617129/4"></p>
+            <br>
+			<p>See more stuff on my GitHub profile</p>
+            <div class="content-footer">
+			    <h3 class="content-button" id="jebait">Test button, don't click!</h3> <h3 class="content-button" id="random-repo">Go to random public repository</h3>
+            </div>
 		</div>
+        <div class="content">
+            <div class="content-header">
+                <h1>Simple command loader for cmdtools framework</h1>
+                <span>
+                    Author: <a class="content-link" href="https://github.com/hugebrain16">HugeBrain16</a><br>
+                    Date: 22 Aug 2022<br>
+                    Category: Guide<br>
+                    Keywords: <code>cmdtools, framework, command, loader, python3</code><br>
+                </span>
+                <a href="https://github.com/hugebrain16/cmdtools"><h4 class="content-button">cmdtools repository</h4></a>
+            </div>
+            <br/> <img src="https://cdn.7tv.app/emote/60ae6ea8f7c927fad1118324/4x">
+            <p>
+                <b>Scuffed guide</b> for loading multiple command modules by using this <i>((simple))</i> loader.<br>
+                We have this directory structure for example:
+                
+                <pre class="content-code">
+./ <- root dir
+    commands/
+        basic.py
+        advanced.py
+    main.py
+                </pre>
+                
+                and you want to load all commands in <i>commands</i> directory.<br>
+                each modules must follow this kind of structure:
+                <pre>
+                <code class="language-python">
+...
+from cmdtools.ext.command import Group
+
+group = Group("foobar")
+
+"""commands to append to group container..."""
+...
+                </code>
+                </pre>
+                in <i>main.py</i> file, define this function for example:
+                <pre>
+                <code class="language-python">
+import os
+import importlib
+from typing import List
+from cmdtools.ext.command import Group
+# lets assume you've imported all of this
+
+def load_commands(commands_dir: str) -> List[Group]:
+    commands = []
+
+    for file in os.listdir(commands_dir):
+        if file.endswith(".py"):
+            modname = file.rsplit(".py", 1)[0] # strip file extension
+            modpath = os.path.join(commands_dir, modname) # make importable dir
+            mod = importlib.import_module(modpath)
+
+            if hasattr(mod, "group"):
+                commands.append(mod.group) if isinstance(mod.group, Group) else continue
+    
+    return commands
+                </code>
+                </pre>
+            </p>
+        </div>
 	</body>
 	<script src="script.js" type="text/javascript"></script>
+    <script src="prism.js" type="text/javascript"></script>
 </html>

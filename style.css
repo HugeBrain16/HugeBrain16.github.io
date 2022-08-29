@@ -83,3 +83,16 @@ body {
     padding: 5px;
     border-bottom: 2px solid darkgray;
 }
+
+.content-footer {
+    padding: 5px;
+    border-top: 2px solid darkgray;
+}
+
+.content-link {
+    color: #0000FF;
+}
+
+.content-code {
+    background-color: #F5F2F0;
+}
