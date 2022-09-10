@@ -111,12 +111,13 @@ def load_commands(commands_dir: str) -> List[Group]:
     for file in os.listdir(commands_dir):
         if file.endswith(".py"):
             modname = file.rsplit(".py", 1)[0] # strip file extension
-            modpath = os.path.join(commands_dir, modname) # make importable dir
+            modpath = os.path.join(commands_dir, modname).replace(os.sep, ".") # make importable dir
             mod = importlib.import_module(modpath)
 
             if hasattr(mod, "group"):
-                commands.append(mod.group) if isinstance(mod.group, Group) else continue
-    
+                if isinstance(mod.group, Group):
+                    commands.append(mod.group)
+
     return commands
                 </code>
                 </pre>
