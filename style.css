@@ -1,5 +1,5 @@
 body {
-    background-color: #282828;
+    background-color: #1d2021;
     font-family: Arial, sans-serif;
 }
 
@@ -13,8 +13,8 @@ body {
     border: 2px solid #689d6a;
     float: left;
     margin: 3px;
-    color: #1d2021;
-    background-color: #928374;
+    color: #ebdbb2;
+    background-color: #3c3836;
 }
 
 .navbar-link {
@@ -31,12 +31,12 @@ body {
 }
 
 .navbar-link:hover {
-    background-color: #7c6f64;
+    background-color: #504945;
 }
 
 .content {
     border: 3px solid #689d6a;
-    background-color: #928374;
+    background-color: #3c3836;
     margin: 25px;
     padding: 10px;
 }
@@ -54,6 +54,7 @@ body {
 
 .content-button {
     display: inline-block;
+    color: #1d2021;
     background-color: #7c6f64;
     border: 3px solid #689d6a;
 }
@@ -71,12 +72,17 @@ body {
     padding: 10px;
 }
 
-.content p, h1 {
-    color: #1d2021;
+.content p {
+    color: #ebdbb2;
+}
+
+.content h1 {
+    color: #fbf1c7;
 }
 
 .content-header {
     padding: 5px;
+    color: #bdae93;
     border-bottom: 2px solid #1d2021;
 }
 
@@ -90,5 +96,5 @@ body {
 }
 
 .content-code {
-    background-color: #bdae93;
+    background-color: #a89984;
 }

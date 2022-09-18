@@ -66,18 +66,19 @@
             <p>
                 <b>Scuffed guide</b> for loading multiple command modules by using this <i>((simple))</i> loader.<br>
                 We have this directory structure for example:
-                
-                <pre class="content-code">
+            </p>
+            <pre class="content-code">
 ./ &lt;- root dir
     commands/
         basic.py
         advanced.py
     main.py
-                </pre>
-                
+            </pre>
+            <p>  
                 and you want to load all commands in <i>commands</i> directory.<br>
                 each modules must follow this kind of structure:
-                <pre class="content-code">
+            </p>
+            <pre class="content-code">
 ...
 from cmdtools.ext.command import Group
 
@@ -85,9 +86,9 @@ group = Group("foobar")
 
 """commands to append to group container..."""
 ...
-                </pre>
-                in <i>main.py</i> file, define this function for example:
-                <pre class="content-code">
+            </pre>
+            <p>in <i>main.py</i> file, define this function for example:</p>
+            <pre class="content-code">
 import os
 import importlib
 from typing import List
@@ -108,8 +109,7 @@ def load_commands(commands_dir: str) -&gt; List[Group]:
                     commands.append(mod.group)
 
     return commands
-                </pre>
-            </p>
+            </pre>
         </div>
 	</body>
 </html>
