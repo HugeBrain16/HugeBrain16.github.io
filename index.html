@@ -6,11 +6,8 @@
 		<link rel="icon" type="image/png" href="favicon.ico">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto%20Sans%20Mono">
         <link rel="stylesheet" href="prism.css">
-		
-		<!-- load js here -->
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-		<!-- weird stuff -->
+        <!-- weird stuff -->
 		<meta charset="UTF-8">
 		<title>HugeBrain16</title>
 	</head>
@@ -55,9 +52,6 @@
             <p>i will merge any posts, guides, or maybe funny stuff <img class="content-emote" src="https://cdn.frankerfacez.com/emoticon/617129/4"></p>
             <br>
 			<p>See more stuff on my GitHub profile</p>
-            <div class="content-footer">
-			    <h3 class="content-button" id="jebait">Test button, don't click!</h3> <h3 class="content-button" id="random-repo">Go to random public repository</h3>
-            </div>
 		</div>
         <div class="content">
             <div class="content-header">
@@ -76,7 +70,7 @@
                 We have this directory structure for example:
                 
                 <pre class="content-code">
-./ <- root dir
+./ &lt;- root dir
     commands/
         basic.py
         advanced.py
@@ -105,7 +99,7 @@ from typing import List
 from cmdtools.ext.command import Group
 # lets assume you've imported all of this
 
-def load_commands(commands_dir: str) -> List[Group]:
+def load_commands(commands_dir: str) -&gt; List[Group]:
     commands = []
 
     for file in os.listdir(commands_dir):
@@ -124,6 +118,5 @@ def load_commands(commands_dir: str) -> List[Group]:
             </p>
         </div>
 	</body>
-	<script src="script.js" type="text/javascript"></script>
     <script src="prism.js" type="text/javascript"></script>
 </html>
