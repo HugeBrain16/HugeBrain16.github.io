@@ -1,16 +1,6 @@
 body {
-    background: linear-gradient(204deg, #0d4b5a, #377a99, #72c1ee);
-    background-size: 600% 600%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: 'Noto Sans Mono', sans-serif;
-    animation: WeirdGradient 59s ease infinite;
-}
-
-@keyframes WeirdGradient {
-    0%{background-position:64% 0%}
-    50%{background-position:37% 100%}
-    100%{background-position:64% 0%}
+    background-color: #282828;
+    font-family: Arial, sans-serif;
 }
 
 .navbar {
@@ -20,9 +10,11 @@ body {
 }
 
 .navbar-item {
-    border: 2px solid darkslategray;
+    border: 2px solid #689d6a;
     float: left;
-    background-color: lightgray;
+    margin: 3px;
+    color: #1d2021;
+    background-color: #928374;
 }
 
 .navbar-link {
@@ -39,12 +31,12 @@ body {
 }
 
 .navbar-link:hover {
-    background-color: darkgray;
+    background-color: #7c6f64;
 }
 
 .content {
-    border: 3px solid darkgray;
-    background-color: lightgray;
+    border: 3px solid #689d6a;
+    background-color: #928374;
     margin: 25px;
     padding: 10px;
 }
@@ -62,12 +54,12 @@ body {
 
 .content-button {
     display: inline-block;
-    background-color: darkgray;
-    border: 3px solid gray;
+    background-color: #7c6f64;
+    border: 3px solid #689d6a;
 }
 
 .content-button:hover {
-    background-color: gray;
+    background-color: #689d6a;
 }
 
 .content p{
@@ -79,14 +71,18 @@ body {
     padding: 10px;
 }
 
+.content p, h1 {
+    color: #1d2021;
+}
+
 .content-header {
     padding: 5px;
-    border-bottom: 2px solid darkgray;
+    border-bottom: 2px solid #1d2021;
 }
 
 .content-footer {
     padding: 5px;
-    border-top: 2px solid darkgray;
+    border-top: 2px solid #1d2021;
 }
 
 .content-link {
@@ -94,5 +90,5 @@ body {
 }
 
 .content-code {
-    background-color: #F5F2F0;
+    background-color: #bdae93;
 }
