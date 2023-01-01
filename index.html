@@ -1,11 +1,8 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<!-- load shid here -->
 		<link rel="stylesheet" href="style.css">
 		<link rel="icon" type="image/png" href="favicon.ico">
-
-        <!-- weird stuff -->
 		<meta charset="UTF-8">
 		<title>HugeBrain16</title>
 	</head>
@@ -46,70 +43,8 @@
 				<span>I'm <b>HugeBrain16</b></span>
 				<img class="content-emote" src="https://cdn.frankerfacez.com/emoticon/584091/4">
 			</p>
-			<p>This page is some kind of blog of mine, and ofc u can submit a post by creating a pull request</p>
-            <p>i will merge any posts, guides, or maybe funny stuff <img class="content-emote" src="https://cdn.frankerfacez.com/emoticon/617129/4"></p>
             <br>
 			<p>See more stuff on my GitHub profile</p>
 		</div>
-        <div class="content">
-            <div class="content-header">
-                <h1>Simple command loader for cmdtools framework</h1>
-                <span>
-                    Author: <a class="content-link" href="https://github.com/hugebrain16">HugeBrain16</a><br>
-                    Date: 29 Aug 2022<br>
-                    Category: Guide<br>
-                    Keywords: <code>cmdtools, framework, command, loader, python3</code><br>
-                </span>
-                <a href="https://github.com/hugebrain16/cmdtools"><h4 class="content-button">cmdtools repository</h4></a>
-            </div>
-            <br/> <img src="https://cdn.7tv.app/emote/60ae6ea8f7c927fad1118324/4x">
-            <p>
-                <b>Scuffed guide</b> for loading multiple command modules by using this <i>((simple))</i> loader.<br>
-                We have this directory structure for example:
-            </p>
-            <pre class="content-code">
-./ &lt;- root dir
-    commands/
-        basic.py
-        advanced.py
-    main.py
-            </pre>
-            <p>  
-                and you want to load all commands in <i>commands</i> directory.<br>
-                each modules must follow this kind of structure:
-            </p>
-            <pre class="content-code">
-...
-from cmdtools.ext.command import Group
-
-group = Group("foobar")
-
-"""commands to append to group container..."""
-...
-            </pre>
-            <p>in <i>main.py</i> file, define this function for example:</p>
-            <pre class="content-code">
-import os
-import importlib
-from typing import List
-from cmdtools.ext.command import Group
-# lets assume you've imported all of this
-
-def load_commands(commands_dir: str) -&gt; List[Group]:
-    commands = []
-
-    for file in os.listdir(commands_dir):
-        if file.endswith(".py"):
-            modname = file.rsplit(".py", 1)[0] # strip file extension
-            modpath = os.path.join(commands_dir, modname).replace(os.sep, ".") # make importable dir
-            mod = importlib.import_module(modpath)
-
-            if hasattr(mod, "group"):
-                if isinstance(mod.group, Group):
-                    commands.append(mod.group)
-
-    return commands
-            </pre>
-        </div>
-	</body>
+    </body>
 </html>
