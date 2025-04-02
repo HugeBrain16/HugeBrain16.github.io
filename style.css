@@ -24,11 +24,6 @@ a {
   color: inherit;
 }
 
-img {
-  pointer-events: none;
-  user-select: none;
-}
-
 #content {
   padding: 4px;
   font-size: medium;
